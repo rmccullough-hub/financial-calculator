@@ -24,26 +24,14 @@ financialcalculator::financialcalculator(QWidget *parent)
 
     //backButtons holds the pointer to all back buttons in the application
     //this for loop connects each back button to the back() function, which sets the page index back to 0
-    /*
     QPushButton *backButtons[12];
     for(int i = 0; i <= 12; i++){
         QString butName = "Back_" + QString::number(i);
         backButtons[i] = financialcalculator::findChild<QPushButton *>(butName);
         connect(backButtons[i], SIGNAL(released()), this, SLOT(back()));
     }
-    */
+ 
     connect(ui->Back, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_2, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_3, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_4, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_5, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_6, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_7, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_8, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_9, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_10, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_11, SIGNAL(released()), this, SLOT(back()));
-    connect(ui->Back_12, SIGNAL(released()), this, SLOT(back()));
 
     connect(ui->CompoundInterest, SIGNAL(released()), this, SLOT(CompoundInterest()));
     connect(ui->SimpleInterest, SIGNAL(released()), this, SLOT(SimpleInterest()));
